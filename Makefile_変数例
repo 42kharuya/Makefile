@@ -1,0 +1,28 @@
+型: [変数] = [定義]
+
+#実行ファイル名
+TARGET = exetest
+
+#生成したい静的ライブラリ名
+NAME = hoge.a
+
+#コンパイル対象としたいプログラム
+SRC = sampale_A.c sample_B.c sampale_C.c \
+    sample_D.c sample_E.sampale_C
+
+#生成したいオブジェクトファイル名
+#SRCSで定義されている.cファイルから.oを生成する
+OBJS = $(SRCS:.c=.o)
+
+
+#コンパイラの指定
+CC = cc
+
+#コンパイルオブションの指定
+CFLAG = -Wall -Wextra -Werror
+
+#インクルードファイルの指定
+INC = -I../inc
+
+#ライブライファイルのパス指定
+LIB =
